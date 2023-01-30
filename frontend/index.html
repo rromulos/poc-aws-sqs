@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>POC - AWS SQS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="//unpkg.com/alpinejs" defer></script>
+    </head>
+    <body>
+        <div x-data="initialize()" class="w-1/3 mx-auto py-10">
+            <h1 class="font-bold py-20 text-6xl">QRCode generator</h1>
+            <div class="py-10 text-xl font-semibold tracking-tighter text-gray-600"></div>
+                <label>Quantity of QRCodes</label>
+                <input x-model="qtyOfImages" class="border w-full p-3 mt-3" type="text"/>
+            <button @click="requestImages()" class="border bg-gray-100 w-full py-3 font=semibold">Request creation</button>
+        </div>
+    </body>
+    <script>
+        function initialize() {
+            return {
+                qtyOfImages: 0,
+                requestImages() {
+                    const body = JSON.stringify({ qtyOfImages: this.qtyOfImages })
+                    fetch('/requestImages', 
+                        {
+                            method: 'POST',
+                            headers: {"Content-type": "application/json"},
+                            body: body
+                        })
+                }
+            }
+        }
+    </script>
+</html>
