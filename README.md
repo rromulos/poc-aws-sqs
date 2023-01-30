@@ -1,4 +1,4 @@
-# POC AWS-SQS - Simple QRCode Generator
+# POC AWS SQS - Simple QRCode Generator
 
 This repository is intended to serve as a proof of concept for AWS SQS implemented in nodejs. In this implementation I tried to exercise all my personal knowledge (still superficial) related to the AWS SQS solution.
 
