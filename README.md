@@ -38,3 +38,21 @@ This repository is intended to serve as a proof of concept for AWS SQS implement
 - Type the amount of qrcodes you want to generate
 - With the terminal open in the backend application, see the messages being received from SQS
 - Open the qrcodes folder in the backend application and open the generated images
+
+## Screenshots
+- Sending messages to AWS SQS through the frontend application
+![image](https://user-images.githubusercontent.com/27534241/215376435-84ca911f-6591-4429-9460-9220391793a0.png)
+
+- Showing received messages in AWS SQS
+![image](https://user-images.githubusercontent.com/27534241/215376485-69a2986f-9027-42f0-a09d-5a058b1dcdd0.png)
+
+- Processing messages from AWS SQS
+
+![image](https://user-images.githubusercontent.com/27534241/215376671-00ae81a1-8e27-41f0-b693-b3e62ed25494.png)
+
+- Checking AWS SQS queue after processing
+![image](https://user-images.githubusercontent.com/27534241/215376765-355e3a4a-173e-4b72-bd8f-65cc7f4c303d.png)
+
+
+
+
